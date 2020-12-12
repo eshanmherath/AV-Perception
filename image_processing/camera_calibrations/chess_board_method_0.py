@@ -23,3 +23,4 @@ if ret == True:
     cv2.drawChessboardCorners(img, (nx, ny), corners, ret)
     plt.imshow(img)
     plt.show()
+
