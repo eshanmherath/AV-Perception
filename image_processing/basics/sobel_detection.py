@@ -24,6 +24,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
     # 2) Take the derivative in x or y given orient = 'x' or 'y'
+    # Default kernel is 3; That's why the 5th parameter on cv2.Sobel is not set in this.
     if orient == 'x':
         sobel = cv2.Sobel(gray, cv2.CV_64F, 1, 0)
     else:
